@@ -43,6 +43,7 @@ export class TasksController {
     public updateTaskStatus(
         @Param() params: FindOneParams,
         @Body() updateTaskDto: UpdateTaskDto
+        //@Body() updateTaskDto: Partial<CreateTaskDto>
     ): ITask {
         try {
             const task = this.findOneOrFail(params.id);
